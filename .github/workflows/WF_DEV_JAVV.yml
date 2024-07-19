@@ -1,0 +1,22 @@
+
+name: Build en DEV_JAVV
+
+on:
+  push:
+    branches:
+      - DEV_JAVV
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout código
+      uses: actions/checkout@v2
+      with:
+        repository: juliobautistaSFTK/TallerGITHUB
+        ref: DEV_JAVV
+
+    - name: Build with Maven
+      run: mvn -B package --file hola-mundo/pom.xml
