@@ -16,4 +16,4 @@ jobs:
         repository: JulioAlanVargas/TALLERGITHUB
         ref: main
     - name: Cat de archivo llamado prueba
-      run: cat Prueba
+      run: cat prueba
